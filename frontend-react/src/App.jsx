@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import MainLayout from "./layouts/MainLayout.jsx";
 
 const App = () => {
-  return (
-<i class="fa-solid fa-person-biking"></i>    
-  )
-}
+  return <MainLayout />;
+};
 
-export default App
+export default App;
