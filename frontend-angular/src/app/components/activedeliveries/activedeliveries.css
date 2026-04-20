@@ -1,0 +1,196 @@
+:host {
+    --primary: #3b889d;            /* Teal */
+    --primary-container: #87ceeb;  /* Baby Blue */
+    --surface: #f8f9fb;
+    --radius-xl: 3rem;
+}
+
+/* Layout الموحد */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Sidebar ثابت */
+    height: 100vh;
+    background: var(--surface);
+}
+
+/* Sidebar Vertical */
+.sidebar {
+    background: white;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column; /* عمودي بالمللي */
+    justify-content: space-between;
+    border-right: 1px solid #eee;
+}
+
+.nav-menu { display: flex; flex-direction: column; gap: 12px; }
+
+.nav-link {
+    background: var(--primary-container); /* Baby Blue الأساسي */
+    color: var(--primary);
+    border: none;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-link.active { background: var(--primary); color: white; }
+
+/* Navbar Styling */
+.top-navbar {
+    background: white;
+    padding: 1.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box {
+    background: #f3f4f6;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 400px;
+}
+
+.status-pill {
+    background: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #22c55e;
+    font-weight: 800;
+}
+
+.dot.active { width: 10px; height: 10px; background: #22c55e; border-radius: 50%; }
+
+/* Delivery Cards - No more Orange! */
+.delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem 0; }
+
+.delivery-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.price-val { color: var(--primary); font-size: 1.8rem; font-weight: 900; }
+
+.btn-navigate {
+    width: 100%;
+    background: var(--primary); /* Teal Action */
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.btn-call { background: #4285f4; color: white; border: none; padding: 1rem; border-radius: 1.2rem; flex: 1; }
+.btn-complete { background: #22c55e; color: white; border: none; padding: 1rem; border-radius: 1.2rem; flex: 1; }
+.sub-btns { display: flex; gap: 10px; }
+
+
+
+
+/* --- Search Box Styling --- */
+.search-container {
+    background: #f3f4f6; /* لون الداشبورد */
+    padding: 0.7rem 1.5rem;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 450px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: var(--on-surface-variant);
+}
+
+/* --- Meta Info (km & mins) --- */
+.meta-row {
+    display: flex;
+    gap: 25px;
+    padding: 15px 0;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 10px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--on-surface-variant);
+}
+
+.meta-item span { font-size: 18px; color: var(--primary); }
+
+/* --- Completed Today Section --- */
+.completed-section {
+    background: white;
+    border-radius: 3rem; /* XL Radius */
+    padding: 2.5rem;
+    margin-top: 3rem;
+}
+
+.comp-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.comp-item:last-child { border-bottom: none; }
+
+.c-info b { font-size: 1rem; color: var(--on-surface); }
+.c-info p { font-size: 0.85rem; color: var(--on-surface-variant); margin: 3px 0; }
+
+.c-results { display: flex; align-items: center; gap: 20px; }
+.stars .material-symbols-outlined { font-size: 16px; color: #e0e0e0; }
+.stars .active { color: #fbc02d; }
+.c-earn { color: #22c55e; font-weight: 900; font-size: 1.1rem; }
+
+.comp-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    border-top: 2px solid #f8f8f8;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+.comp-footer .total { color: #22c55e; }
+
+/* --- Buttons --- */
+.btn-navigate {
+    background: var(--primary); /* Teal Color #3b889d */
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 1.1rem;
+    border-radius: 1.5rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
