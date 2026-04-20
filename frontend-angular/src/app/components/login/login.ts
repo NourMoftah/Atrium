@@ -26,7 +26,6 @@ export class Login {
     if (this.loginForm.valid) {
       this.isLoading.set(true);
       
-      // الداتا اللي هتروح للباك إند بسيطة ومباشرة
       const credentials = { 
         phone: this.loginForm.value.phone!,
         nationalId: this.loginForm.value.nationalId!

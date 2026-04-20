@@ -8,15 +8,27 @@ import { AuthResponse, Rider } from '../models/rider';
 })
 export class AuthService {
   private http = inject(HttpClient);
-  private readonly baseUrl = 'https://api.makook.com';
+  private readonly baseUrl = 'http://localhost:3000/'; 
+
   register(riderData: Partial<Rider>): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>(`${this.baseUrl}/riders/register`, riderData);
+    const dataToSend = { ...riderData, role: 'DELIVERY' };
+    return this.http.post<AuthResponse>(`${this.baseUrl}user/register`, dataToSend);
   }
 
-  login(credentials: { phone: string }): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>(`${this.baseUrl}/riders/login`, credentials);
-  }
+
+uploadImage(file: File): Observable<{ imageUrl: string }> {
+  const formData = new FormData();
+  formData.append('image', file); 
+  return this.http.post<{ imageUrl: string }>(`${this.baseUrl}upload/image`, formData);
+}
+
+
+
+login(credentials: { phone: string; nationalId: string }): Observable<AuthResponse> {
+  return this.http.post<AuthResponse>(`${this.baseUrl}user/login`, credentials);
+}
 
   saveToken(token: string): void {
     localStorage.setItem('makook_token', token);
-  }}
+  }
+}

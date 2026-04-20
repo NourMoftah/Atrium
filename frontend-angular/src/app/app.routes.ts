@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { Requists } from './components/requists/requists';
+import { Activedeliveries } from './components/activedeliveries/activedeliveries';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'register', pathMatch: 'full' },
@@ -14,6 +16,9 @@ export const routes: Routes = [
     path: 'dashboard', 
     loadComponent: () => import('./components/dashboard/dashboard').then(c => c.Dashboard) 
   },
+
+  { path: 'requests', component: Requists },
+  { path: 'active', component: Activedeliveries },
   { path: '**', redirectTo: 'login' }
 
 ];

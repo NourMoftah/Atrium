@@ -62,7 +62,7 @@
             <div style="margin-top: 2rem;">
                 <button class="btn-primary" type="button" 
                         (click)="currentStep() === 3 ? onSubmit() : nextStep()"
-                        [disabled]="!canGoNext() || isLoading()">
+                       >
                     @if (isLoading()) {
                         <span>Loading...</span>
                     } @else {
