@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import HomePage from "../pages/home/HomePage.jsx";
-import Myorders from "../pages/MyOrders.jsx/MyOrders.jsx";
+import Myorders from "../pages/MyOrders/Myorders.jsx";
 import TrackOrders from "../pages/trackOrders/TrackOrders.jsx";
 import Notification from "../pages/notification/Notification.jsx";
 import Profile from "../pages/profile/Profile.jsx";
