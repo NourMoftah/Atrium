@@ -8,6 +8,7 @@ import CategoryCard from "../../components/categoryCard/Category";
 import DriverCard from "../../components/DriverCard/DriverCard";
 import RecentOrders from "../../components/RecentOrders/RecentOrders";
 import WelcomeHome from "../../components/welcomeHome/WelcomeHome";
+import { useNavigate } from "react-router-dom";
 
 console.log(BACKEND_URL);
 
@@ -117,6 +118,11 @@ const gridStyle = {
 };
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = () => {
+    navigate("/new-order");
+  };
   return (
     <div className="container py-4">
       <WelcomeHome />
@@ -158,7 +164,11 @@ const HomePage = () => {
 
             <div style={gridStyle}>
               {categories.map((cat) => (
-                <CategoryCard key={cat.id} {...cat} />
+                <CategoryCard
+                  key={cat.id}
+                  {...cat}
+                  onClick={() => handleCategoryClick()}
+                />
               ))}
             </div>
           </div>

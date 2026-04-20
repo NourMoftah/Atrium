@@ -14,7 +14,7 @@ const Profile = () => {
  useEffect(() => {
   const getProfile = async () => {
     try {
-      const res = await fetch(BACKEND_URL + "user/getProfile", {
+      const res = await fetch(BACKEND_URL + "user/profile", {
         credentials: "include",
       });
       const data = await res.json();

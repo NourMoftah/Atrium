@@ -24,20 +24,18 @@ const MainLayout = () => {
               <i className="fa-solid fa-magnifying-glass"></i>
             </InputGroup.Text>
 
-            <Form.Control
-              placeholder="Search..."
-              aria-label="Search"
-            />
+            <Form.Control placeholder="Search..." aria-label="Search" />
           </InputGroup>
         </div>
-
-        <Button
-          variant="light"
-          className="rounded-circle p-2"
-          aria-label="Notifications"
-        >
-          <i className="fa-regular fa-bell"></i>
-        </Button>
+        <NavLink to="/notifications">
+          <Button
+            variant="light"
+            className="rounded-circle p-2"
+            aria-label="Notifications"
+          >
+            <i className="fa-regular fa-bell"></i>
+          </Button>
+        </NavLink>
       </header>
 
       <div className={styles.body}>
