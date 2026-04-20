@@ -60,8 +60,8 @@ const drivers = [
     distance: "0.5 km away",
     rating: 4.9,
     isOnline: true,
-    avatarColor: "#87ceeb",
-    avatarTextColor: "#3b889d",
+    avatarColor: "#BAEAFF",
+    avatarTextColor: "#004D62",
   },
   {
     id: "fatima",
