@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/frontend-react/dist/index.html"
+    },
+    {
+        "source": "/dashboard(.*)",
+        "destination": "frontend-angular/dist/makook-rider-dashboard/browser/index.html"
+    }
+  ]
+}
