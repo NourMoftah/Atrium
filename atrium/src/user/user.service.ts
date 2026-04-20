@@ -36,6 +36,21 @@ export class UserService {
         }
     }
 
+    async check(token: string, res: any) {
+        try {
+            const user = await this.userModel.findOne({ token }).select('-password -__v -createdAt -updatedAt').exec();
+
+            if (user) {
+                return res.status(200).send({ status: 200, message: "Authorized", data: user });
+            } else {
+                return res.status(200).send({ status: 401, message: "Unauthorized" });
+            }
+
+        } catch (err) {
+            return res.status(401).send({ status: 401, message: "Unauthorized" });
+        }
+    }
+
     async signin(data: LoginDto, res: any) {
         if (!data.username && !data.email) {
             throw new Error('Email Or Username Must Be Provided');

@@ -12,6 +12,13 @@ export class UserController {
         return this.userService.getProfile(req, res);
     }
 
+    @Get('check')
+    check(@Request() req, @Response() res) {
+        const token = req.cookies.accessToken;
+
+        return this.userService.check(token, res);
+    }
+
     @Post('login')
     login(
         @Body() login: LoginDto,
