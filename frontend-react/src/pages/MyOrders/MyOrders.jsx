@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MyOrders.css";
-
-import { BACKEND_URL } from "../../../../options";
 
 const ORDERS = [
   {
@@ -117,22 +115,22 @@ const OrderCard = ({ order }) => {
 };
 
 const MyOrders = () => {
-  //const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("All");
 
-  const [orders, setOrders] = useState([]);
+  //const [orders, setOrders] = useState([]);
 
-  useEffect(() => {
-    fetch(`${BACKEND_URL}/order/getOrders`, { credentials: "include" })
+  /*useEffect(() => {
+    fetch("http://localhost:3000/order/getOrders", { credentials: "include" })
       .then((res) => res.json())
       .then((res) => {
-        setOrders(res.data);
+        //setOrders(res.data);
       });
-  });
+  });*/
 
-  /*const filteredOrders =
+  const filteredOrders =
     filter === "All"
       ? ORDERS
-      : ORDERS.filter((order) => order.status === filter);*/
+      : ORDERS.filter((order) => order.status === filter);
 
   return (
     <div className="my-orders-page">
@@ -149,15 +147,16 @@ const MyOrders = () => {
         {["All", "Pending", "In Progress", "Delivered"].map((item) => (
           <button
             key={item}
-          >
+              onClick={() => setFilter(item)}
+            className={`filter-btn ${filter === item ? "active" : ""}`}>
             {item}
           </button>
         ))}
       </div>
 
       <div className="orders-list">
-        {orders.map((order) => (
-          <OrderCard key={order._id} order={order} />
+        {filteredOrders.map((order) => (
+          <OrderCard key={order.id} order={order} />
         ))}
       </div>
     </div>
