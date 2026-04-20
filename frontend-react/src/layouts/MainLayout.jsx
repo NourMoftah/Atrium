@@ -40,7 +40,6 @@ const MainLayout = () => {
         </Button>
       </header>
 
-      {/* Body */}
       <div className={styles.body}>
         {/* Sidebar */}
         <aside className={styles.sidebar}>

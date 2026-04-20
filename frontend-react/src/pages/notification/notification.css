@@ -29,7 +29,7 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  color: #e8714a;
+  color: #519AB5;
   padding: 0;
   transition: opacity 0.2s ease;
 }
@@ -63,8 +63,8 @@
 }
 
 .notif-item.unread {
-  border-color: #f4c4b0;
-  background-color: #fffaf8;
+  border-color: #BAEAFF;
+  background-color: #DEF4FF;
 }
 
 .notif-icon {
@@ -114,7 +114,7 @@
 .footer a {
   font-size: 12px;
   font-weight: 700;
-  color: #e8714a;
+  color: #34809A;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
@@ -127,7 +127,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #e8714a;
+  background-color: #34809A;
   flex-shrink: 0;
   margin-top: 4px;
 }

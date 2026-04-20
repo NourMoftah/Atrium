@@ -11,7 +11,9 @@
 
   cursor: pointer;
 
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
   width: 100%;
 }
 

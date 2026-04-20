@@ -5,8 +5,8 @@ const NOTIFICATIONS = [
   {
     id: 1,
     icon: "📦",
-    iconBg: "#E6F7F0",
-    iconColor: "#2E9E6B",
+    iconBg: "#FFFFFF",
+    iconColor: "#DEF4FF",
     title: "Order Delivered",
     desc: "Your order #M1240 has been delivered successfully",
     time: "5 minutes ago",
@@ -15,8 +15,8 @@ const NOTIFICATIONS = [
   {
     id: 2,
     icon: "⭐",
-    iconBg: "#FEF9E3",
-    iconColor: "#C9A227",
+    iconBg: "#FFFFFF",
+    iconColor: "#DEF4FF",
     title: "Rate Your Experience",
     desc: "How was your delivery with Mohammed A.?",
     time: "10 minutes ago",
@@ -26,8 +26,8 @@ const NOTIFICATIONS = [
   {
     id: 3,
     icon: "🎁",
-    iconBg: "#F3EEFF",
-    iconColor: "#7B4FBF",
+    iconBg: "#FFFFFF",
+    iconColor: "#DEF4FF",
     title: "Special Offer!",
     desc: "Get 20% off on your next orders",
     time: "1 hour ago",

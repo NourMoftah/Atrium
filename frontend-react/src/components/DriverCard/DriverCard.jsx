@@ -7,17 +7,15 @@ const DriverCard = ({
   rating = 4.9,
   isOnline = true,
   avatarColor = "#BAEAFF",
-  avatarTextColor = "#519AB5",
+  avatarTextColor = "#004D62",
   onClick,
 }) => {
   const initial = name.charAt(0).toUpperCase();
 
   return (
     <div className="driver-card" onClick={onClick}>
-      {/* Online dot */}
       <div className={`status-dot ${isOnline ? "online" : "offline"}`} />
 
-      {/* Top */}
       <div className="driver-top">
         <div
           className="avatar"
@@ -35,7 +33,6 @@ const DriverCard = ({
         </div>
       </div>
 
-      {/* Bottom */}
       <div className="driver-rating">
         <FaStar style={{ color: "#0C6780" }} />
         <span className="rating">{rating.toFixed(1)}</span>

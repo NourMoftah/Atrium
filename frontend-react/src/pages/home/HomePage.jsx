@@ -1,14 +1,18 @@
 import React from "react";
 import { FaBox, FaClock, FaLocationArrow, FaStar } from "react-icons/fa";
 
+import { BACKEND_URL } from "../../../../options";
+
 import StatusCard from "../../components/card/Card";
 import CategoryCard from "../../components/categoryCard/Category";
 import DriverCard from "../../components/DriverCard/DriverCard";
 import RecentOrders from "../../components/RecentOrders/RecentOrders";
 import WelcomeHome from "../../components/welcomeHome/WelcomeHome";
 
+console.log(BACKEND_URL);
+
 // constant right now until the backend send the endpoints
-const PRIMARY_COLOR = "#34809A";
+const PRIMARY_COLOR = "#3b889d";
 
 const categories = [
   {
@@ -56,8 +60,8 @@ const drivers = [
     distance: "0.5 km away",
     rating: 4.9,
     isOnline: true,
-    avatarColor: "#BAEAFF",
-    avatarTextColor: "#519AB5",
+    avatarColor: "#87ceeb",
+    avatarTextColor: "#3b889d",
   },
   {
     id: "fatima",
@@ -115,8 +119,7 @@ const gridStyle = {
 const HomePage = () => {
   return (
     <div className="container py-4">
-   
-      <WelcomeHome/>
+      <WelcomeHome />
 
       {/* Status Cards */}
       <div className="d-flex flex-wrap gap-3 mb-5">

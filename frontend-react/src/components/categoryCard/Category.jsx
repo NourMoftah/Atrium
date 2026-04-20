@@ -11,7 +11,6 @@ const CategoryCard = ({
 }) => {
   return (
     <div className="category-card" onClick={onClick}>
-      {/* Left */}
       <div className="card-left">
         <div
           className="card-icon"
@@ -23,7 +22,6 @@ const CategoryCard = ({
         <span className="card-title">{title}</span>
       </div>
 
-      {/* Right */}
       <div
         className="card-badge"
         style={{
