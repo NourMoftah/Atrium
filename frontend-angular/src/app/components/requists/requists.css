@@ -52,7 +52,6 @@
 
 .page-wrapper { display: flex; height: 100vh; background: var(--surface); }
 
-/* Sidebar Styling */
 .sidebar {
     width: 280px; background: white; padding: 2.5rem 1.5rem;
     display: flex; flex-direction: column; justify-content: space-between;
@@ -70,7 +69,6 @@
 .nav-link:hover { transform: translateX(10px); background: #76bedb; }
 .nav-link.active { background: var(--primary); color: white; }
 
-/* Main Content & Navbar */
 .main-content { flex: 1; overflow-y: auto; display: flex; flex-direction: column; }
 .top-navbar {
     background: white; padding: 1rem 3rem;
@@ -89,7 +87,6 @@
     font-weight: 800; cursor: pointer;
 }
 
-/* Stats & Grid */
 .content-body { padding: 2.5rem 3.5rem; }
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 2rem 0; }
 .stat-card { background: white; padding: 1.5rem; border-radius: 1.5rem; }
@@ -118,7 +115,6 @@
 
 .card-footer { display: flex; gap: 1rem; margin-top: 2rem; }
 
-/* Shadows */
 .shadow-soft { box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
 .shadow-premium { box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
 
@@ -174,7 +170,7 @@
     border-radius: 3rem;
     padding: 2.5rem;
     box-shadow: 0 10px 40px rgba(0,0,0,0.03);
-    border: 2.5px solid transparent; /* No-Line Rule */
+    border: 2.5px solid transparent; 
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
