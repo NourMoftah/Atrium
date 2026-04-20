@@ -67,6 +67,8 @@ export class UserService {
             role: user.role
         }, "somesecretkey");
 
+        await user.updateOne({ token }).exec();
+
         res.cookie('accessToken', token, {
             expires: new Date(new Date().getTime() + (7 * 24 * 60 * 60 * 1000)),
             httpOnly: true
@@ -91,6 +93,8 @@ export class UserService {
                 _id: newUser._id,
                 role: newUser.role
             }, "somesecretkey");
+
+            await newUser.updateOne({ token }).exec();
 
             res.cookie('accessToken', token, {
                 expires: new Date(new Date().getTime() + (7 * 24 * 60 * 60 * 1000)),
