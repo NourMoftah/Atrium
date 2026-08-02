@@ -7,6 +7,9 @@ export interface Rider {
    password?:string;
      username?:string;
     university: string;
+
+
+    
     phone: string;
     hasBicycle: boolean; 
     status: 'pending' | 'active' | 'inactive';

@@ -60,8 +60,9 @@
             }
 
             <div style="margin-top: 2rem;">
-                <button class="btn-primary" type="button" 
-                        (click)="currentStep() === 3 ? onSubmit() : nextStep()"
+                  <button class="btn-primary" type="button"       
+                (click)="currentStep() === 3 ?
+                    router.navigate(['/dashboard']) : nextStep()"
                        >
                     @if (isLoading()) {
                         <span>Loading...</span>
